@@ -32,6 +32,7 @@
 @media (max-width: 280px) {
     .cell {
         font-size: 1rem;
+        height: 80px;
     }
 }
 
