@@ -22,3 +22,39 @@ function renderBoard() {
         gameBoard.appendChild(cell);
     });
 }
+function makeMove(index, player) {
+    if (!board[index]) {
+        board[index] = player;
+        renderBoard();
+        if (checkWin(player)) {
+            alert(`${player} wins!`);
+            isGameActive = false;
+        } else if (board.every(cell => cell)) {
+            alert('It\'s a draw!');
+            isGameActive = false;
+        } else {
+            currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+    }
+}
+
+function aiMove() {
+    let index;
+    if (aiDifficulty === 'easy') {
+        index = getRandomMove();
+    } else if (aiDifficulty === 'medium') {
+        index = getBestMove(false);
+    } else {
+        index = getBestMove(true);
+    }
+    makeMove(index, 'O');
+}
+
+function getRandomMove() {
+    const availableMoves = board.map((cell, index) => cell === null ? index : null).filter(index => index !== null);
+    return availableMoves[Math.floor(Math.random() * availableMoves.length)];
+}
+function getBestMove(isOptimal) {
+    // Implement basic or minimax logic based on difficulty
+    return isOptimal ? minimax(board, 'O').index : getRandomMove();
+}
