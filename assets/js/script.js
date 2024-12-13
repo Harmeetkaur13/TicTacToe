@@ -63,3 +63,36 @@ function resetGame() {
     });
     isXTurn = true;
 }
+
+function showAlert(message) {
+    const alertBox = document.createElement('div');
+    alertBox.textContent = message;
+    alertBox.style.position = 'fixed';
+    alertBox.style.top = '50%';
+    alertBox.style.left = '50%';
+    alertBox.style.transform = 'translate(-50%, -50%)';
+    alertBox.style.padding = '20px';
+    alertBox.style.backgroundColor = 'white';
+    alertBox.style.border = '1px solid black';
+    alertBox.style.zIndex = '1000';
+    document.body.appendChild(alertBox);
+
+    setTimeout(() => {
+        document.body.removeChild(alertBox);
+    }, 2000);
+}
+
+function handleClick(e) {
+    const cell = e.target;
+    const currentClass = isXTurn ? 'X' : 'O';
+    placeMark(cell, currentClass);
+    if (checkWin(currentClass)) {
+        showAlert(`${currentClass} wins!`);
+        resetGame();
+    } else if (isDraw()) {
+        showAlert('Draw!');
+        resetGame();
+    } else {
+        swapTurns();
+    }
+}

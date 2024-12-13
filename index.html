@@ -26,7 +26,7 @@
     <main class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
-                <div class="game-board">
+                <div id="game-board" class="game-board">
                     <div class="row no-gutters">
                         <div class="col cell" data-cell></div>
                         <div class="col cell" data-cell></div>
@@ -55,9 +55,19 @@
 
     <!-- Buttons section -->
 
+    <div class="mt-3">
+        <button class="btn btn-primary me-2" id="new-game">New Game</button>
+        <button class="btn btn-secondary" id="player-mode">Player Mode</button>
+    </div>
+
+    <div id="win-message" class="d-none">Player Wins!</div>
+    <div id="player-turn">Player turn: X</div>
 
     <!-- Footer section -->
-
+    <footer class="mt-5">
+        <p class="text-muted">&copy; Copyright | <a href="index.html">Home</a> | <a href="#">Register/Profile</a> | <a
+                href="#">About Us</a></p>
+    </footer>
 
     <!-- Bootstrap script link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -66,6 +76,8 @@
 
     <!-- JS link -->
     <script src="assets/js/script.js"></script>
+
+
 </body>
 
 </html>
