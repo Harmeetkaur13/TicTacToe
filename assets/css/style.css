@@ -28,6 +28,17 @@
     box-sizing: border-box;
 }
 
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+    padding: 10px 0;
+    text-align: center;
+}
+
 /* Media queries */
 @media (max-width: 576px) {
     .header {
@@ -50,5 +61,6 @@
 
     footer {
         font-size: 0.8rem;
+        padding: 5px 0;
     }
 }
