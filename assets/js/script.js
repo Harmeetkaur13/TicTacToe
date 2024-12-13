@@ -58,3 +58,34 @@ function getBestMove(isOptimal) {
     // Implement basic or minimax logic based on difficulty
     return isOptimal ? minimax(board, 'O').index : getRandomMove();
 }
+function minimax(newBoard, player) {
+    const availableSpots = newBoard.map((cell, index) => cell === null ? index : null).filter(index => index !== null);
+
+    if (checkWin('X', newBoard)) return { score: -10 };
+    if (checkWin('O', newBoard)) return { score: 10 };
+    if (availableSpots.length === 0) return { score: 0 };
+
+    const moves = [];
+    availableSpots.forEach(spot => {
+        const move = {};
+        move.index = spot;
+        newBoard[spot] = player;
+        const result = minimax(newBoard, player === 'O' ? 'X' : 'O');
+        move.score = result.score;
+        newBoard[spot] = null;
+        moves.push(move);
+    });
+
+    return player === 'O'
+        ? moves.reduce((best, move) => (move.score > best.score ? move : best), { score: -Infinity })
+        : moves.reduce((best, move) => (move.score < best.score ? move : best), { score: Infinity });
+}
+
+function checkWin(player, boardState = board) {
+    const winPatterns = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+    ];
+    return winPatterns.some(pattern => pattern.every(index => boardState[index] === player));
+}
