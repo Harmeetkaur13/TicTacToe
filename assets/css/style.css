@@ -1,11 +1,32 @@
+body {
+    background: url('../images/background.png') no-repeat center center fixed;
+    background-size: 100% auto;
+    background-color: #f0f0f0;
+    /* Fallback color */
+}
+
 /* Header */
 .header {
-    margin-top: 50px;
+    position: relative;
+    background-color: rgba(240, 240, 240, 0.8);
+    /* Semi-transparent background matching the body's background color */
+    padding: 20px;
+    margin: 20px;
+    margin-top: 0%;
+    z-index: 1;
+    /* Ensure it stays above the background */
 }
 
 .header h1 {
     margin: 0;
     font-size: 2.5rem;
+}
+
+#player-turn {
+    background-color: rgba(240, 240, 240, 0.8);
+    font-size: larger;
+    font-weight: bold;
+    z-index: 2;
 }
 
 /* Game board */
@@ -14,6 +35,7 @@
     max-width: 100%;
     box-sizing: border-box;
     margin-top: 20%;
+    background-color: white;
 }
 
 .cell {
