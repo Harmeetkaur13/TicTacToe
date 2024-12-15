@@ -95,6 +95,15 @@ footer {
         padding: 0.25rem 0.5rem;
     }
 
+    .modal-body .row {
+        flex-direction: column;
+    }
+
+    .modal-body .col-md-4 {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
     footer {
         font-size: 0.9rem;
         padding: 5px 0;
