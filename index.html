@@ -15,16 +15,14 @@
 </head>
 
 <body>
-    <!-- Headiing section -->
+    <!-- Heading section -->
     <header class="header text-center mt-5">
         <h1 class="display-1 fw-bold">Row Rumble</h1>
     </header>
 
-    <!-- Main section -->
-
     <!-- Game board -->
-    <main class="container mt-5">
-        <div class="row justify-content-center">
+    <main class="container mt-3">
+        <div class="row justify-content-center pb-2">
             <div class="col-12 col-md-8 col-lg-6">
                 <div id="game-board" class="game-board">
                     <div class="row no-gutters">
@@ -47,27 +45,105 @@
         </div>
     </main>
 
-    <!-- Help section -->
-
-
     <!-- Score section -->
 
 
-    <!-- Buttons section -->
 
-    <div class="mt-3">
+    <!-- Help button -->
+    <button class="btn btn-info btn-sm position-fixed top-0 end-0 m-3" id="help" data-bs-toggle="modal"
+        data-bs-target="#helpModal">
+        <i class="bi bi-question-circle"></i> Help
+    </button>
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">Help</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Here is some helpful information about the game:</p>
+                    <ul>
+                        <li>Click on a cell to make your move.</li>
+                        <li>The game alternates turns between Player X and Player O.</li>
+                        <li>The first player to get three in a row wins.</li>
+                        <li>If all cells are filled without a winner, the game is a draw.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game buttons -->
+    <div class="mt-3 text-center mb-3">
         <button class="btn btn-primary me-2" id="new-game">New Game</button>
         <button class="btn btn-secondary" id="player-mode">Player Mode</button>
     </div>
 
+    <!-- Game messages -->
     <div id="win-message" class="d-none">Player Wins!</div>
     <div id="player-turn">Player turn: X</div>
 
     <!-- Footer section -->
     <footer class="mt-5">
-        <p class="text-muted">&copy; Copyright | <a href="index.html">Home</a> | <a href="#">Register/Profile</a> | <a
-                href="#">About Us</a></p>
+        <p class="text-muted">&copy; HAMburger 2024 | <a href="index.html">Home</a> | <a href="#">Register/Profile</a> |
+            <a href="#" data-bs-toggle="modal" data-bs-target="#aboutUsModal">About Us</a></p>
     </footer>
+
+    <!-- About Us section -->
+    <div class="modal fade" id="aboutUsModal" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutUsModalLabel">About Us</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <p>HAMburger is small team organised by Code Institute to complete a Hackathon project. This
+                            required the use of HTML, CSS, Bootstrap and Javascript. To this end, we decided to create
+                            an online game which uses logic and is designed with User Experience and aesthetics in mind.
+                            Learn more about our team below.</p>
+                        <div class="row">
+                            <div class="col-md-4 mb-3 d-flex">
+                                <div class="card flex-fill">
+                                    <img src="Harmeet's picture" class="card-img-top" alt="Harmeet Kaur - Team Lead">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Harmeet Kaur</h5>
+                                        <p class="card-text">Harmeet's description.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <div class="card flex-fill">
+                                    <img src="Ashrafur's picture" class="card-img-top" alt="Ashrafur Ahmed">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ashrafur Ahmed</h5>
+                                        <p class="card-text">Ashrafur's description.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 d-flex">
+                                <div class="card flex-fill">
+                                    <img src="Maryan's picture" class="card-img-top" alt="Maryan Aden">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Maryan Aden</h5>
+                                        <p class="card-text">Maryan's description.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap script link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
