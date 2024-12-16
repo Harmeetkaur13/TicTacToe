@@ -71,6 +71,7 @@ Initial wireframes were designed for desktop, tablet, and mobile views to ensure
 - **Background:** Gradient from teal to lavender for a calming effect.
 - **Buttons:** Contrasting shades of blue for clear call-to-action.
 - **Imagery:** Minimalistic icons and hover effects.
+We use the coolers.co to create this color palette.
 ![Color palette](assets/images/colourpalette.png)
 ## Website Features
 ### Tablet/Mobile View
@@ -90,6 +91,7 @@ The game is fully optimized for smaller screens. Buttons and cells are large eno
 - Visual Studio Code
 - Git and GitHub
 ## Deployment
+Row Rumble was deployed to GitHub Pages. https://harmeetkaur13.github.io/TicTacToe
 Row Rumble was deployed to GitHub Pages. Follow these steps to deploy:
 1. Push your code to a GitHub repository.
 2. Go to the repository settings.
