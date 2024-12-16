@@ -13,6 +13,24 @@ document.getElementById('main-menu').addEventListener('click', () => {
     window.location.href = 'index.html'; 
 });
 
+document.getElementById('new-game').addEventListener('click', resetGame);
+
+function resetGame() {
+    const cells = document.querySelectorAll('[data-cell]');
+    cells.forEach(cell => {
+        cell.textContent = '';
+        cell.classList.remove('X', 'O');
+        cell.removeEventListener('click', handleClick);
+        cell.addEventListener('click', handleClick, { once: true });
+    });
+
+    isXTurn = true;
+    document.getElementById('player-turn').textContent = 'Player turn: X';
+
+    const winMessage = document.getElementById('win-message');
+    if (winMessage) winMessage.classList.add('d-none');
+}
+
 
 function handleClick(e) {
     const cell = e.target;

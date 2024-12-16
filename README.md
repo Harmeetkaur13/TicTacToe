@@ -1,131 +1,132 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Row Rumble - Tic-Tac-Toe Game
 
-Welcome Ashrafur Ahmed,
+## Live Site
+[Play Row Rumble] (https://harmeetkaur13.github.io/TicTacToe/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Brief Introduction
+Row Rumble is a vibrant, fun, and challenging take on the classic Tic-Tac-Toe game. Developed during a group hackathon by Maryan, Harmeet, and Ashrafur, this project demonstrates teamwork and creativity in web development. The game offers engaging gameplay with "Player vs Player" modes, featuring a responsive, aesthetically pleasing interface.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Responsivity
+Row Rumble is fully responsive, ensuring seamless gameplay across desktop, tablet, and mobile devices.
 
-## Gitpod Reminders
+### Example Image
+![Row Rumble Gameplay](assets/images/example.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Contents
+- [UX (User Experience)](#ux-user-experience)
+  - [User Stories](#user-stories)
+- [Strategy](#strategy)
+- [Scope](#scope)
+- [Structural Design](#structural)
+- [Skeleton (Wireframes)](#skeleton-wireframes)
+- [Surface Design](#surface-design)
+  - [Typography](#typography)
+  - [Color Scheme and Imagery](#color-scheme-and-imagery)
+- [Website Features](#website-features)
+  - [Tablet/Mobile View](#tablet-mobile-view)
+  - [Future Features](#future-features)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks and Libraries](#frameworks-and-libraries)
+  - [Programs](#programs)
+- [Deployment](#deployment)
+- [Testing](#testing)
+  - [Validation](#validation)
+  - [Lighthouse Audit](#lighthouse-audit)
+  - [Bugs](#bugs)
+- [Credits](#credits)
+  - [Content References](#content-references)
+  - [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## UX (User Experience)
 
-A blue button should appear to click: _Make Public_,
+### User Stories
+1. **As a user,** I want to play Tic-Tac-Toe against a friend or the computer so I can have fun and challenge myself.
+2. **As a user,** I want the option to select the difficulty level when playing against the computer to match my skill level.
+3. **As a user,** I want a responsive design so I can play the game on any device.
+4. **As a user,** I want a visually appealing interface to enhance my gaming experience.
+5. **As a user,** I want quick access to instructions and a main menu to easily navigate the game.
 
-Another blue button should appear to click: _Open Browser_.
+## Strategy
+The goal of this project was to create a fun and interactive game using JavaScript. The focus was on user engagement, responsive design, and implementing ai logic for the computer opponent.
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## Scope
+Row Rumble includes:
+- "Player vs Player" mode.
+- A responsive and interactive UI with clear visual feedback.
 
-A blue button should appear to click: _Make Public_,
+## Structural
+The game is structured into:
+- A main menu for navigation.
+- The game board for playing.
+- Interactive modals for instructions and about information.
 
-Another blue button should appear to click: _Open Browser_.
+## Skeleton (Wireframes)
+Initial wireframes were designed for desktop, tablet, and mobile views to ensure a consistent experience. These included layouts for the main menu, game board, and modals.
+![Wireframe Image](assets/images/Wireframe%20-%20Computer.png)
+![Wireframe Image](assets/images/Wireframe%20-%20Mobile.png)
+![Wireframe Image](assets/images/Wireframe%20-%20Tablet.png)
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Surface Design
 
-To log into the Heroku toolbelt CLI:
+### Typography
+- **Header:** Arial Bold for a modern and clean look.
+- **Body:** Sans-serif for readability.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Color Scheme and Imagery
+- **Background:** Gradient from teal to lavender for a calming effect.
+- **Buttons:** Contrasting shades of blue for clear call-to-action.
+- **Imagery:** Minimalistic icons and hover effects.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+## Website Features
 
-### Connecting your Mongo database
+### Tablet/Mobile View
+The game is fully optimized for smaller screens. Buttons and cells are large enough for touch interactions, and the layout adjusts to ensure no content overlaps.
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Future Features
+- Leaderboard to track high scores.
+- Timer for speed challenges.
+- Sound effects for moves and victories.
 
-------
+## Technologies Used
 
-## Release History
+### Languages
+- HTML
+- CSS
+- JavaScript
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Frameworks and Libraries
+- Bootstrap 5
 
-**June 18, 2024,** Add Mongo back into template
+### Programs
+- Visual Studio Code
+- Git and GitHub
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## Deployment
+Row Rumble was deployed to GitHub Pages. https://harmeetkaur13.github.io/TicTacToe/
 
-**May 28 2024:** Fix Mongo and Links installs
+## Testing
 
-**April 26 2024:** Update node version to 16
+### Validation
+- **HTML:** 
+- **CSS:** 
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Lighthouse Audit
+The game scored high on performance, accessibility, and SEO.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Bugs
+- **Resolved:** A bug where the computer opponent skipped turns.
+- **Ongoing:** Rare edge case where win detection fails in rapid gameplay.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Credits
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+### Content References
+- Inspiration from the classic Tic-Tac-Toe game.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### Acknowledgements
+- **Maryan Aden, Harmeet Kaur, Ashrafur Ahmed** for developing Row Rumble.
+- **ChatGPT** for guidance and code generation.
+- **Media References:** Bootstrap icons and custom gradient backgrounds.
 
 ---
-
-Happy coding!
+Thank you for playing Row Rumble! We hope you enjoy the game!
