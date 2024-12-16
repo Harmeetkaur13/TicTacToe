@@ -2,7 +2,7 @@
 body {
     background: url('../images/background.png') no-repeat center center fixed;
     background-size: 100% auto;
-    background-color: #f0f0f0;
+    background-color: #F0F0F0;
     /* Fallback color */
     display: flex;
     flex-direction: column;
@@ -39,11 +39,19 @@ main {
 
 /* Score section */
 .score-section {
-    background-color: #f8f9fa;
-    border: 2px solid #dee2e6;
+    background-color: #F8F9FA;
+    border: 2px solid #DEE2E6;
     padding: 10px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.score-section .row {
+    margin-bottom: 10px;
+}
+
+.score-section .col {
+    padding: 5px;
 }
 
 /* Game board */
@@ -69,8 +77,8 @@ main {
 
 /* Footer */
 footer {
-    background-color: #f8f9fa;
-    border-top: 2px solid #dee2e6;
+    background-color: #F8F9FA;
+    border-top: 2px solid #DEE2E6;
     padding: 10px 0;
     text-align: center;
     position: relative;
@@ -80,7 +88,6 @@ footer {
 }
 
 /* Media queries */
-
 /* Mobile devices */
 @media (max-width: 320px) {
 
@@ -97,15 +104,26 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* score section */
     .score-section {
         padding: 5px;
         font-size: 0.8rem;
+        width: 100%;
+        /* Adjust the width for mobile screens */
+        margin: 0 auto;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        display: flex;
+        justify-content: space-between;
+        /* Align items horizontally */
+    }
+
+    .score-section .col {
+        text-align: center;
     }
 
     /* Game board section */
     .game-board {
-        margin-top: 2%;
+        margin-top: 1px;
     }
 
     .cell {
@@ -118,6 +136,11 @@ footer {
     #help {
         font-size: 0.3rem;
         padding: 0.2rem 0.4rem;
+    }
+
+    .custom-button {
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
 
     /* Footer section */
@@ -135,9 +158,13 @@ footer {
         font-size: 3rem;
     }
 
+    #player-turn {
+        font-size: 3rem;
+    }
+
     /* Score section */
     .score-section {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     /* Game board section */
@@ -185,14 +212,27 @@ footer {
     .score-section {
         position: absolute;
         top: 40%;
-        right: 10%;
-        width: 150px;
+        right: 5%;
+        width: 300px;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .score-section .col {
+        text-align: center;
+    }
+
+    .score-section .d-flex {
+        justify-content: space-evenly;
     }
 
     /* Game board section */
     .game-board {
-        margin-top: 5%;
+        margin-top: 2%;
+        margin-left: 9%;
         padding: 10px;
+        width: 85%;
     }
 
     .cell {
@@ -220,21 +260,31 @@ footer {
     /* Header section*/
     .header h1 {
         font-size: 3.5rem;
-
     }
 
     /* Score section */
     .score-section {
-        position: absolute;
-        top: 40%;
-        right: 10%;
-        width: 150px;
-        font-size: 1.2rem;
+        padding: 5px;
+        font-size: 1.5rem;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 1px;
+        margin-top: 1px;
+    }
+
+    .score-section .col {
+        text-align: center;
+    }
+
+    .score-section .d-flex {
+        justify-content: space-evenly;
     }
 
     /* Game board section */
     .game-board {
-        padding: 10px;
+        margin-top: 1%;
+        margin-left: 8%;
+        padding: 5px;
     }
 
     .cell {
