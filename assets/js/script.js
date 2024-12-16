@@ -98,3 +98,45 @@ function updateScore() {
     document.getElementById('losses').textContent = losses;
     document.getElementById('draws').textContent = draws;
 }
+
+let player1Wins = 0;
+let player1Losses = 0;
+let player1Draws = 0;
+let player2Wins = 0;
+let player2Losses = 0;
+let player2Draws = 0;
+
+function handleClick(e) {
+    const cell = e.target;
+    const currentClass = isXTurn ? 'X' : 'O';
+    placeMark(cell, currentClass);
+    if (checkWin(currentClass)) {
+        showAlert(`${currentClass} wins!`);
+        if (currentClass === 'X') {
+            player1Wins++;
+            player2Losses++;
+        } else {
+            player2Wins++;
+            player1Losses++;
+        }
+        updateScore();
+        resetGame();
+    } else if (isDraw()) {
+        showAlert('Draw!');
+        player1Draws++;
+        player2Draws++;
+        updateScore();
+        resetGame();
+    } else {
+        swapTurns();
+    }
+}
+
+function updateScore() {
+    document.getElementById('player1-wins').textContent = player1Wins;
+    document.getElementById('player1-losses').textContent = player1Losses;
+    document.getElementById('player1-draws').textContent = player1Draws;
+    document.getElementById('player2-wins').textContent = player2Wins;
+    document.getElementById('player2-losses').textContent = player2Losses;
+    document.getElementById('player2-draws').textContent = player2Draws;
+}

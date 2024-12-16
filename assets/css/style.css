@@ -93,15 +93,24 @@ footer {
         font-size: 1.2rem;
     }
 
-    /* score section */
     .score-section {
-        padding: 5px; 
+        padding: 5px;
         font-size: 0.8rem;
+        width: 100%; /* Adjust the width for mobile screens */
+        margin: 0 auto;
+        margin-bottom: 1px;
+        margin-top: 1px;
+        display: flex;
+        justify-content: space-between; /* Align items horizontally */
+    }
+
+    .score-section .col {
+        text-align: center;
     }
 
     /* Game board section */
     .game-board {
-        margin-top: 2%;
+        margin-top: 1px;
     }
 
     .cell {
@@ -114,6 +123,11 @@ footer {
     #help {
         font-size: 0.3rem;
         padding: 0.2rem 0.4rem;
+    }
+
+    .custom-button {
+        margin-top: 1px;
+        margin-bottom: 1px;
     }
 
     /* Footer section */
@@ -131,12 +145,13 @@ footer {
         font-size: 3rem;
     }
 
-        #player-turn {
+    #player-turn {
         font-size: 3rem;
     }
+
     /* Score section */
     .score-section {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     /* Game board section */
@@ -184,16 +199,27 @@ footer {
     .score-section {
         position: absolute;
         top: 40%;
-        right: 10%;
-        width: 150px;
+        right: 5%;
+        width: 300px;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .score-section .col {
+        text-align: center;
+    }
+
+    .score-section .d-flex {
+        justify-content: space-evenly;
     }
 
     /* Game board section */
     .game-board {
-        margin-top: 5%;
-        margin-left: 6%;
+        margin-top: 2%;
+        margin-left: 9%;
         padding: 10px;
-        width: 90%;
+        width: 85%;
     }
 
     .cell {
@@ -225,16 +251,27 @@ footer {
 
     /* Score section */
     .score-section {
-        position: absolute;
-        top: 40%;
-        right: 10%;
-        width: 150px;
-        font-size: 1.2rem;
+        padding: 5px;
+        font-size: 1.5rem;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 1px;
+        margin-top: 1px;
+    }
+
+    .score-section .col {
+        text-align: center;
+    }
+
+    .score-section .d-flex {
+        justify-content: space-evenly;
     }
 
     /* Game board section */
     .game-board {
-        padding: 10px;
+        margin-top: 1%;
+        margin-left: 8%;
+        padding: 5px;
     }
 
     .cell {
