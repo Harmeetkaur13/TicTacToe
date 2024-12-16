@@ -10,7 +10,7 @@ cells.forEach(cell => {
     });
 });
 document.getElementById('main-menu').addEventListener('click', () => {
-    window.location.href = 'index.html'; // Adjust the file path as needed
+    window.location.href = 'index.html'; 
 });
 
 
