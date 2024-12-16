@@ -3,9 +3,53 @@ let isXTurn = true;
 let wins = 0;
 let losses = 0;
 let draws = 0;
-cells.forEach(cell => {
-    cell.addEventListener('click', handleClick, {
-        once: true
+let player1Name = '';
+let player2Name = '';
+let playWithComputer = false;
+
+document.addEventListener('DOMContentLoaded', () => {
+    const playerNamesModal = new bootstrap.Modal(document.getElementById('playerNamesModal'));
+
+    const player2NameContainer = document.getElementById('player2NameContainer');
+    document.getElementById('playWithComputer').addEventListener('change', () => {
+        player2NameContainer.style.display = 'none';
+        document.getElementById('player-mode').innerText = 'Computer Mode';
+    });
+    document.getElementById('enterPlayer2Name').addEventListener('change', () => {
+        player2NameContainer.style.display = 'block';
+        document.getElementById('player-mode').innerText = 'Player Mode';
+    });
+
+    document.getElementById('playerNamesForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        player1Name = document.getElementById('player1Name').value;
+        playWithComputer = document.querySelector('input[name="player2Option"]:checked').value === 'computer';
+        if (!playWithComputer) {
+            player2Name = document.getElementById('player2Name').value;
+        } else {
+            player2Name = 'Computer';
+        }
+        playerNamesModal.hide();
+        resetGame();
+        updatePlayerTurn();
+    });
+
+    document.getElementById('new-game').addEventListener('click', () => {
+        playerNamesModal.show();
+    });
+
+    cells.forEach(cell => {
+        cell.addEventListener('click', handleClick, {
+            once: true
+        });
+    });
+    cells.forEach(cell => {
+        cell.addEventListener('click', () => {
+            if (player1Name === '' || player2Name === '') {
+                playerNamesModal.show();
+                resetGame()
+            }
+        });
     });
 });
 
@@ -14,7 +58,7 @@ function handleClick(e) {
     const currentClass = isXTurn ? 'X' : 'O';
     placeMark(cell, currentClass);
     if (checkWin(currentClass)) {
-        showAlert(`${currentClass} wins!`);
+        showAlert(`${currentClass === 'X' ? player1Name : player2Name} wins!`);
         if (currentClass === 'X') {
             wins++;
         } else {
@@ -29,6 +73,10 @@ function handleClick(e) {
         resetGame();
     } else {
         swapTurns();
+        updatePlayerTurn();
+        if (playWithComputer && !isXTurn) {
+            setTimeout(computerMove, 2000); // Delay computer move by 2 seconds
+        }
     }
 }
 
@@ -72,6 +120,7 @@ function resetGame() {
         });
     });
     isXTurn = true;
+    updatePlayerTurn();
 }
 
 function showAlert(message) {
@@ -86,6 +135,7 @@ function showAlert(message) {
     alertBox.style.border = '1px solid black';
     alertBox.style.zIndex = '1000';
     document.body.appendChild(alertBox);
+
     setTimeout(() => {
         document.body.removeChild(alertBox);
     }, 2000);
@@ -95,4 +145,15 @@ function updateScore() {
     document.getElementById('wins').textContent = wins;
     document.getElementById('losses').textContent = losses;
     document.getElementById('draws').textContent = draws;
+}
+
+function updatePlayerTurn() {
+    const playerTurnElement = document.getElementById('player-turn');
+    playerTurnElement.textContent = `Player turn: ${isXTurn ? player1Name : player2Name}`;
+}
+
+function computerMove() {
+    const emptyCells = [...cells].filter(cell => !cell.textContent);
+    const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+    randomCell.click();
 }
