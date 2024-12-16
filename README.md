@@ -7,7 +7,7 @@ Row Rumble is a vibrant, fun, and challenging take on the classic Tic-Tac-Toe ga
 ## Responsivity
 Row Rumble is fully responsive, ensuring seamless gameplay across desktop, tablet, and mobile devices.
 ### Example Image
-![Row Rumble Gameplay](assets/images/example.png)
+![Row Rumble Gameplay](assets/images/RowRumble.png)
 ## Contents
 - [UX (User Experience)](#ux-user-experience)
   - [User Stories](#user-stories)
