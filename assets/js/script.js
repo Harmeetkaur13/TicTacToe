@@ -9,6 +9,10 @@ cells.forEach(cell => {
         once: true
     });
 });
+document.getElementById('main-menu').addEventListener('click', () => {
+    window.location.href = 'index.html'; 
+});
+
 
 function handleClick(e) {
     const cell = e.target;
