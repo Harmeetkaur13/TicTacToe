@@ -1,5 +1,8 @@
 const cells = document.querySelectorAll('[data-cell]');
 let isXTurn = true;
+let wins = 0;
+let losses = 0;
+let draws = 0;
 
 cells.forEach(cell => {
     cell.addEventListener('click', handleClick, {
@@ -12,10 +15,18 @@ function handleClick(e) {
     const currentClass = isXTurn ? 'X' : 'O';
     placeMark(cell, currentClass);
     if (checkWin(currentClass)) {
-        alert(`${currentClass} wins!`);
+        showAlert(`${currentClass} wins!`);
+        if (currentClass === 'X') {
+            wins++;
+        } else {
+            losses++;
+        }
+        updateScore();
         resetGame();
     } else if (isDraw()) {
-        alert('Draw!');
+        showAlert('Draw!');
+        draws++;
+        updateScore();
         resetGame();
     } else {
         swapTurns();
@@ -82,17 +93,8 @@ function showAlert(message) {
     }, 2000);
 }
 
-function handleClick(e) {
-    const cell = e.target;
-    const currentClass = isXTurn ? 'X' : 'O';
-    placeMark(cell, currentClass);
-    if (checkWin(currentClass)) {
-        showAlert(`${currentClass} wins!`);
-        resetGame();
-    } else if (isDraw()) {
-        showAlert('Draw!');
-        resetGame();
-    } else {
-        swapTurns();
-    }
+function updateScore() {
+    document.getElementById('wins').textContent = wins;
+    document.getElementById('losses').textContent = losses;
+    document.getElementById('draws').textContent = draws;
 }
