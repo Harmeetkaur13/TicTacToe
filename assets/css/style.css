@@ -131,6 +131,9 @@ footer {
         font-size: 3rem;
     }
 
+        #player-turn {
+        font-size: 3rem;
+    }
     /* Score section */
     .score-section {
         margin-bottom: 20px;
