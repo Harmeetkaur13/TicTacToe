@@ -82,11 +82,15 @@ footer {
 /* Media queries */
 
 /* Mobile devices */
-@media (min-width: 320px) {
+@media (max-width: 320px) {
 
     /* Header section*/
     .header {
-        margin-top: 5px;
+        height: 50px;
+    }
+
+    #player-turn {
+        height: 50px;
     }
 
     .header h1 {
@@ -247,6 +251,7 @@ footer {
     /* Header section*/
     .header h1 {
         font-size: 3.5rem;
+
     }
 
     /* Score section */

@@ -3,7 +3,6 @@ let isXTurn = true;
 let wins = 0;
 let losses = 0;
 let draws = 0;
-
 cells.forEach(cell => {
     cell.addEventListener('click', handleClick, {
         once: true
@@ -87,7 +86,6 @@ function showAlert(message) {
     alertBox.style.border = '1px solid black';
     alertBox.style.zIndex = '1000';
     document.body.appendChild(alertBox);
-
     setTimeout(() => {
         document.body.removeChild(alertBox);
     }, 2000);
