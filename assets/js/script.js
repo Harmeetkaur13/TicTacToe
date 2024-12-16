@@ -21,7 +21,11 @@ function renderBoard() {
         cell.textContent = mark || '';
         gameBoard.appendChild(cell);
     });
-}
+};
+document.getElementById('main-menu').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
+
 
 function makeMove(index, player) {
     if (!board[index]) {
