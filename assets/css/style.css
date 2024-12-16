@@ -259,7 +259,6 @@ footer {
     /* Header section*/
     .header h1 {
         font-size: 3.5rem;
-
     }
 
     /* Score section */
@@ -302,6 +301,6 @@ footer {
     /* Footer section */
     footer {
         font-size: 1.1rem;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 }
