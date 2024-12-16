@@ -1,8 +1,11 @@
 const cells = document.querySelectorAll('[data-cell]');
 let isXTurn = true;
-let wins = 0;
-let losses = 0;
-let draws = 0;
+let player1Wins = 0;
+let player1Losses = 0;
+let player1Draws = 0;
+let player2Wins = 0;
+let player2Losses = 0;
+let player2Draws = 0;
 let player1Name = '';
 let player2Name = '';
 let playWithComputer = false;
@@ -60,15 +63,18 @@ function handleClick(e) {
     if (checkWin(currentClass)) {
         showAlert(`${currentClass === 'X' ? player1Name : player2Name} wins!`);
         if (currentClass === 'X') {
-            wins++;
+            player1Wins++;
+            player2Losses++;
         } else {
-            losses++;
+            player2Wins++;
+            player1Losses++;
         }
         updateScore();
         resetGame();
     } else if (isDraw()) {
         showAlert('Draw!');
-        draws++;
+        player1Draws++;
+        player2Draws++;
         updateScore();
         resetGame();
     } else {
@@ -142,9 +148,12 @@ function showAlert(message) {
 }
 
 function updateScore() {
-    document.getElementById('wins').textContent = wins;
-    document.getElementById('losses').textContent = losses;
-    document.getElementById('draws').textContent = draws;
+    document.getElementById('player1-wins').textContent = player1Wins;
+    document.getElementById('player1-losses').textContent = player1Losses;
+    document.getElementById('player1-draws').textContent = player1Draws;
+    document.getElementById('player2-wins').textContent = player2Wins;
+    document.getElementById('player2-losses').textContent = player2Losses;
+    document.getElementById('player2-draws').textContent = player2Draws;
 }
 
 function updatePlayerTurn() {

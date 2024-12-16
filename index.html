@@ -68,15 +68,29 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
                 <div id="score-section" class="score-section">
-                    <h2>Score</h2>
-                    <p>Wins: <span id="wins">0</span></p>
-                    <p>Losses: <span id="losses">0</span></p>
-                    <p>Draws: <span id="draws">0</span></p>
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="fw-bold">Player 1</h2>
+                            <div class="d-flex justify-content-between">
+                                <p>Wins: <span id="player1-wins">0</span></p>
+                                <p>Losses: <span id="player1-losses">0</span></p>
+                                <p>Draws: <span id="player1-draws">0</span></p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <h2 class="fw-bold">Player 2</h2>
+                            <div class="d-flex justify-content-between">
+                                <p>Wins: <span id="player2-wins">0</span></p>
+                                <p>Losses: <span id="player2-losses">0</span></p>
+                                <p>Draws: <span id="player2-draws">0</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Game board -->
     <main class="container mt-3">
         <div class="row justify-content-center pb-2">
