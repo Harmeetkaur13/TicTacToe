@@ -191,7 +191,9 @@ footer {
     /* Game board section */
     .game-board {
         margin-top: 5%;
+        margin-left: 6%;
         padding: 10px;
+        width: 90%;
     }
 
     .cell {
